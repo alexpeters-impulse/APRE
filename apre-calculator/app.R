@@ -421,8 +421,7 @@ server <- function(input, output, session) {
           icon("clock"), " Rest ", tags$strong("3–5 minutes"), " before Set 4."
         )
       ),
-      numericInput("s3_reps_input", "Reps completed:", value = NULL, min = 0, max = 50, step = 1,
-                   placeholder = "Enter total reps done"),
+      numericInput("s3_reps_input", "Reps completed:", value = NULL, min = 0, max = 50, step = 1),
       uiOutput("s3_preview"),
       div(class = "nav-btns",
         actionButton("btn_s3_back", "← Back", class = "btn-outline-secondary"),
