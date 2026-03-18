@@ -421,7 +421,7 @@ server <- function(input, output, session) {
           icon("clock"), " Rest ", tags$strong("3–5 minutes"), " before Set 4."
         )
       ),
-      numericInput("s3_reps_input", "Reps completed:", value = NULL, min = 0, max = 50, step = 1),
+      numericInput("s3_reps_input", "Reps completed:", value = NA_real_, min = 0, max = 50, step = 1),
       uiOutput("s3_preview"),
       div(class = "nav-btns",
         actionButton("btn_s3_back", "← Back", class = "btn-outline-secondary"),
@@ -476,7 +476,7 @@ server <- function(input, output, session) {
           icon("lightbulb"), " This set autoregulates your training — do your best!"
         )
       ),
-      numericInput("s4_reps_input", "Reps completed:", value = NULL, min = 0, max = 50, step = 1),
+      numericInput("s4_reps_input", "Reps completed:", value = NA_real_, min = 0, max = 50, step = 1),
       uiOutput("s4_preview"),
       div(class = "nav-btns",
         actionButton("btn_s4_back", "← Back", class = "btn-outline-secondary"),
