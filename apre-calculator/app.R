@@ -555,8 +555,9 @@ server <- function(input, output, session) {
         ),
         div(class = "summary-row",
           span(class = "summary-label", "Set 4 — AMRAP"),
-          span(class = "summary-value", paste0(r$set4, " ", u, "  ×  ", s4_reps(), " reps",
-            "  ", tags$span(class = adj4_cls, paste0("(", adj4_lbl, " ", u, ")"))))
+          span(class = "summary-value",
+            paste0(r$set4, " ", u, "  ×  ", s4_reps(), " reps  "),
+            tags$span(class = adj4_cls, paste0("(", adj4_lbl, " ", u, ")")))
         ),
         div(class = "summary-row",
           span(class = "summary-label", tags$strong("Next session weight")),
