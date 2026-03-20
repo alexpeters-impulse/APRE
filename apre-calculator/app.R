@@ -310,6 +310,10 @@ server <- function(input, output, session) {
       uiOutput("setup_preview"),
       div(class = "nav-btns",
         actionButton("btn_start", "Start Session →", class = "btn-primary btn-lg")
+      ),
+      div(style = "text-align:center; margin-top:20px; color:#6b7280; font-size:.85rem; line-height:1.6;",
+        tags$strong("Alex Peters"), br(),
+        "Impulse Physical Therapy"
       )
     )
   }
