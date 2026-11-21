@@ -1,0 +1,14 @@
+<!-- Impulse PT APRE10 Calculator: paste into a WordPress "Custom HTML" block (or Elementor "HTML" widget). -->
+<iframe id="impulse-apre10" src="https://alexpeters-impulse.github.io/apre/"
+        title="APRE10 Calculator" loading="lazy"
+        style="width:100%;min-height:900px;border:0;display:block;"></iframe>
+<script>
+(function () {
+  var f = document.getElementById('impulse-apre10');
+  window.addEventListener('message', function (e) {
+    if (e.origin !== 'https://alexpeters-impulse.github.io' || !e.data) return;
+    if (e.data.type === 'impulse-apre10-height') f.style.height = (e.data.height + 4) + 'px';
+    if (e.data.type === 'impulse-apre10-scrolltop') f.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>
